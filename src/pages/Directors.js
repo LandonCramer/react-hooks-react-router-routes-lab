@@ -1,14 +1,18 @@
 import { directors } from "../data";
+import Card from "../components/Card"
+import NavBar from "../components/NavBar"
 
 function Directors() {
+  const directorList = directors.map(director => <Card key={director.name} name={director.name} movies={director.movies}/>)
   
   return (
     <>
       <header>
-        {/* What component should go here? */}
+        <NavBar />
       </header>
       <main>
-        {/* Director info here! */}
+        <h1>Directors Page</h1>
+        {directorList}
       </main>
     </>
   );
